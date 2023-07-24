@@ -1,0 +1,42 @@
+def quiz_game():
+    questions = [
+        {
+            "question":"Who baptized Jesus?",
+            "answer": "John"
+        },
+        {
+            "question": "Who was the prophet in nebhucadnezar reign",
+            "answer": "Daniel"
+        },
+        {
+            "question": "who saved the israelites from egyptians",
+            "answer": "Moses"
+        },
+        {
+            "question": "the first man on the face of earth?",
+            "answer": "Adam"
+        },
+        {
+            "question": "Iam the way, the truth and the ____",
+            "answer": "life"
+        }
+    ]
+
+    score = 0
+
+    for question in questions:
+        print(question["question"])
+        user_answer = input("Enter your answer: ")
+
+        if user_answer.lower() == question["answer"].lower():
+            print("Correct answer!")
+            score += 1
+        else:
+            print("Wrong answer!")
+
+        print()
+
+    print("Quiz completed!")
+    print("Your score:", score, "out of", len(questions))
+
+quiz_game()
